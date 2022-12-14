@@ -1,7 +1,7 @@
-import WrappedCards from "@/components/WrappedCards";
-import { useSession } from 'next-auth/react'
+import WrappedCards from '@/components/WrappedCards';
+import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/router';
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
 function Wrapped() {
   const router = useRouter();
@@ -10,14 +10,20 @@ function Wrapped() {
   useEffect(() => {
     // @ts-ignore
     if (!session || !router.asPath.includes(session?.user.login)) {
-      router.push('/')
+      router.push('/');
     }
-  }, []) 
+  }, []);
 
   return (
     <div className="Wrapped">
       <div className="wrapped__wrap">
-        <WrappedCards img='' type="Hello SH!" score="10" session={session}/>
+        <WrappedCards
+          img=""
+          phrase=""
+          type="Hello SH!"
+          score="10"
+          session={session}
+        />
       </div>
     </div>
   );
