@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import { renderToString } from 'react-dom/server';
-import { useGetGithubInfos } from '../hooks/useGithubLogin';
+import { useGetGithubInfos } from '../hooks/useGetGithubInfos';
 import { TGitHubUser } from 'src/types/TGithub';
 import { TWrappedCard } from '../types/TWrappedCard';
 import {
